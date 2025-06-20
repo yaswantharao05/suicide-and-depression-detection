@@ -55,7 +55,7 @@ print("Loaded multi classification model")
 
 client = InferenceClient(
     provider="hf-inference",
-    api_key="<HugguingFace API Key>",  # Replace with your Hugging Face API key
+    api_key=HUGGINGFACE_API_KEY,  # Replace with your Hugging Face API key
 )
 
 def predict_text(text):

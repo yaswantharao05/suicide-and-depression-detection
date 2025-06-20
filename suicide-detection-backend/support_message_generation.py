@@ -4,7 +4,7 @@ def generate_support_message(chat_history, predicted_class):
 
     client = InferenceClient(
     provider="hf-inference",
-    api_key="<HugguingFace API Key>",
+    api_key=HUGGINGFACE_API_KEY,
     )
     
     concerning_phrases = chat_history
