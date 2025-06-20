@@ -18,13 +18,13 @@ This section presents a summary of the model evaluation, demonstrating the syste
 
 ---
 
-### 🎯 Objective
+#### 🎯 Objective
 
 The goal was to assess the performance of the proposed machine learning system in identifying individuals at mental health risk through text classification. The models were evaluated based on accuracy, precision, recall, and F1-score. In addition, the system's usability—especially through the web interface and interpretative message generation—was analyzed to determine its practicality for real-world applications.
 
 ---
 
-### 📈 BiLSTM Model Performance
+#### 📈 BiLSTM Model Performance
 
 The BiLSTM model was trained over 10 epochs for binary classification (Suicide vs No Suicide):
 
@@ -37,7 +37,7 @@ The BiLSTM model was trained over 10 epochs for binary classification (Suicide v
 
 ---
 
-### 🤖 BERT Model (Binary Classification)
+#### 🤖 BERT Model (Binary Classification)
 
 The BERT model was fine-tuned for binary classification:
 
@@ -50,7 +50,7 @@ The BERT model was fine-tuned for binary classification:
 
 ---
 
-### 🔄 BERT Multi-class Classification
+#### 🔄 BERT Multi-class Classification
 
 The model was extended to classify text into **three classes**: SuicideWatch, Anxiety, and Depression:
 
@@ -63,16 +63,16 @@ The model was extended to classify text into **three classes**: SuicideWatch, An
 
 ---
 
-### 📋 Performance Metrics Summary
+#### 📋 Performance Metrics Summary
 
-#### 🧪 Binary Classification (Suicide Detection)
+##### 🧪 Binary Classification (Suicide Detection)
 
 | Model   | Accuracy | Recall  | Precision | F1 Score |
 |---------|----------|---------|-----------|----------|
 | BiLSTM  | 0.9420   | 0.9331  | 0.9487    | 0.9409   |
 | BERT    | 0.9542   | 0.9387  | 0.9423    | 0.9405   |
 
-#### 🔢 Multi-class Classification (SWMH)
+##### 🔢 Multi-class Classification (SWMH)
 
 | Model | Accuracy | Recall  | Precision | F1 Score |
 |-------|----------|---------|-----------|----------|
@@ -80,18 +80,20 @@ The model was extended to classify text into **three classes**: SuicideWatch, An
 
 ---
 
-### 🧩 Insights
+#### 🧩 Insights
 
 - Both models demonstrated high generalization ability with minimal overfitting.
 - BERT outperformed BiLSTM in all binary classification metrics.
 - The multi-class BERT model achieved exceptional performance, showcasing its ability to distinguish between related mental health conditions with high reliability.
 - Combined with the frontend dashboard, these models form an effective tool for early mental health risk detection and intervention.
 
+
 ## ✅ Accuracy
 
 - **BERT (Binary Classification)**: Achieved **96.4% accuracy** in detecting suicidal messages.
 - **BERT (Multi-Class Classification)**: Achieved **91.2% accuracy** for classifying between healthy, depressive, and suicidal messages.
 - **Support Message Generation**: The system also suggests empathetic, supportive responses based on detected emotional tone.
+
 
 ## 🖥️ Frontend / User Interface
 
@@ -148,7 +150,7 @@ The **Dashboard** empowers users to analyze chat or message data (in CSV format)
 
 ---
 
-### ✅ Key Benefits
+#### ✅ Key Benefits of UI
 
 - **Early Risk Identification**: Enables timely action before potential crises emerge.
 - **Contextual Explanations**: Offers transparency by showing which phrases contributed to the prediction.
@@ -164,3 +166,29 @@ This integrated frontend ensures **real-time, accessible, and proactive mental h
 - **Non-intrusive Monitoring**: Uses text analysis to assess risk without violating privacy through invasive means.
 - **Extensible Architecture**: Easily adaptable for various mental health conditions beyond depression and suicide.
 - **Human-in-the-loop Design**: Allows professionals or parents to review predictions before taking action.
+
+
+## 🧰 Tech Stack Used
+
+### 🎯 Machine Learning & NLP
+- **Python** – Data processing, modeling, and backend logic
+- **PyTorch** – Deep learning model training (BiLSTM, BERT)
+- **Transformers (HuggingFace)** – Pretrained BERT models
+- **NLTK / SpaCy** – Text preprocessing and tokenization
+- **Pandas / NumPy** – Data wrangling and feature engineering
+
+### 🌐 Backend
+- **FastAPI** – API framework for model inference (alternatively Flask)
+- **Uvicorn** – ASGI server for serving FastAPI apps
+
+### 💻 Frontend
+- **ReactJS + Vite** – Fast, lightweight UI for dashboard
+- **Chart.js / D3.js** – Data visualizations like word frequencies and risk scores
+- **Chrome Extension** – For monitoring user queries in-browser
+
+### ⚙️ Tools USed
+- **Git & GitHub** – Version control and collaboration
+- **Vercel** – Hosting frontend app
+- **Hugging Face Hub** – Model hosting & token access
+
+---
