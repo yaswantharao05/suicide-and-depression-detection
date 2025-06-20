@@ -177,18 +177,14 @@ This integrated frontend ensures **real-time, accessible, and proactive mental h
 - **NLTK / SpaCy** – Text preprocessing and tokenization
 - **Pandas / NumPy** – Data wrangling and feature engineering
 
-### 🌐 Backend
-- **FastAPI** – API framework for model inference (alternatively Flask)
-- **Uvicorn** – ASGI server for serving FastAPI apps
-
 ### 💻 Frontend
 - **ReactJS + Vite** – Fast, lightweight UI for dashboard
 - **Chart.js / D3.js** – Data visualizations like word frequencies and risk scores
 - **Chrome Extension** – For monitoring user queries in-browser
 
-### ⚙️ Tools USed
-- **Git & GitHub** – Version control and collaboration
-- **Vercel** – Hosting frontend app
+### 🌐 Backend
+- **FastAPI** – API framework for model inference (alternatively Flask)
+- **Uvicorn** – ASGI server for serving FastAPI apps
 - **Hugging Face Hub** – Model hosting & token access
 
 ---
