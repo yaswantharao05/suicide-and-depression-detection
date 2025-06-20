@@ -47,3 +47,6 @@ suicide-detection-frontend/.env.*.local
 
 # --- Git Ignore Rule File (already tracked, ignore new updates) ---
 !.gitignore
+
+# ignore environment files
+**/.env
