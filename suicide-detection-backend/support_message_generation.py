@@ -1,10 +1,11 @@
 from huggingface_hub import InferenceClient
+import os
 
 def generate_support_message(chat_history, predicted_class):
 
     client = InferenceClient(
     provider="hf-inference",
-    api_key=HUGGINGFACE_API_KEY,
+    api_key=os.getenv("HUGGINGFACE_API_KEY"),
     )
     
     concerning_phrases = chat_history

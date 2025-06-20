@@ -1,6 +1,8 @@
 import random, re, torch
 import pandas as pd
 import torch.nn.functional as F
+import os
+
 from collections import Counter
 
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
@@ -55,7 +57,7 @@ print("Loaded multi classification model")
 
 client = InferenceClient(
     provider="hf-inference",
-    api_key=HUGGINGFACE_API_KEY,  # Replace with your Hugging Face API key
+    api_key=os.getenv("HUGGINGFACE_API_KEY"),  # Replace with your Hugging Face API key
 )
 
 def predict_text(text):
