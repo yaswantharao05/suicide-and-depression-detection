@@ -34,14 +34,14 @@ app.add_middleware(
 )
 
 # Load the fine-tuned BERT model
-MODEL_SAVE_PATH = r"E:\Capstone Project\dashboard\suicide-detection-backend\saved_model-bert_binary"
+MODEL_SAVE_PATH = r"\suicide-detection-backend\saved_model-bert_binary"
 tokenizer = tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
 model = AutoModelForSequenceClassification.from_pretrained(MODEL_SAVE_PATH)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
 print("Loaded binary classification model")
 
-MULTI_CLASS_MODEL_SAVE_PATH = "E:\Capstone Project\dashboard\suicide-detection-backend\bert_mental_disorder_model_final_multiClass"
+MULTI_CLASS_MODEL_SAVE_PATH = "\suicide-detection-backend\bert_mental_disorder_model_final_multiClass"
 MULTI_CLASS_tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
 MULTI_CLASS_model = BertForSequenceClassification.from_pretrained(
     "bert-base-uncased",
@@ -49,13 +49,13 @@ MULTI_CLASS_model = BertForSequenceClassification.from_pretrained(
     # hidden_dropout_prob=0.2,   
     # attention_probs_dropout_prob=0.2,
 )
-MULTI_CLASS_model.load_state_dict(torch.load(r"E:\Capstone Project\dashboard\suicide-detection-backend\bert_mental_disorder_model_final_multiClass\best_model.pth", map_location=torch.device('cpu')))
+MULTI_CLASS_model.load_state_dict(torch.load(r"\suicide-detection-backend\bert_mental_disorder_model_final_multiClass\best_model.pth", map_location=torch.device('cpu')))
 MULTI_CLASS_model.to(device)
 print("Loaded multi classification model")
 
 client = InferenceClient(
     provider="hf-inference",
-    api_key="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",
+    api_key="<HugguingFace API Key>",  # Replace with your Hugging Face API key
 )
 
 def predict_text(text):
@@ -247,17 +247,7 @@ def generate_support_message(concerning_phrases, predicted_class):
     ]
 
     start_time = time.time()
-    
-    # completion = client.chat.completions.create(
-    #     model="HuggingFaceH4/zephyr-7b-alpha",
-    #     messages=messages_for_llm,
-    #     max_tokens=500,
-    # )
-    # print(completion.choices[0].message.content)
 
-    # message = (completion.choices[0].message.content).split('\n')
-        
-    # print("====> ",type(completion.choices[0].message.content))
     response = llm_predict(prompt)
 
     end_time = time.time()
