@@ -1,0 +1,49 @@
+# --- Python suicide-detection-backend Ignore Rules ---
+
+# Byte-compiled / optimized / DLL files
+**/__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+suicide-detection-backend/venv/
+
+# Model directories
+suicide-detection-backend/bert_mental_disorder_model_final_multiClass/
+suicide-detection-backend/saved_model-bert_binary/
+
+# Environment variables
+suicide-detection-backend/.env
+
+# Logs
+*.log
+
+# --- Node / React Frontend Ignore Rules ---
+
+# Node modules
+suicide-detection-frontend/node_modules/
+
+# Production build
+suicide-detection-frontend/dist/
+
+# Environment variables
+suicide-detection-frontend/.env
+suicide-detection-frontend/.env.*.local
+
+# Misc
+*.local
+*.DS_Store
+
+# --- OS / IDE / Editor Ignore Rules ---
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# JetBrains IDEs
+.idea/
+
+# --- Git Ignore Rule File (already tracked, ignore new updates) ---
+!.gitignore

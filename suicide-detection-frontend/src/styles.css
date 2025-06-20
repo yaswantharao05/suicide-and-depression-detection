@@ -1,0 +1,251 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items:baseline;
+    min-height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    width: 100%;
+    max-width: 1500px;
+    padding: 20px 60px 70px 60px;
+    /* padding-top: 50px; */
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .file-input {
+    padding: 10px;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    background: white;
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    margin-right: 25px;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .upload-button {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 25%;
+    max-width: 300px;
+  }
+  
+  .upload-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
+  }
+  
+  .upload-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .results-container {
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .results-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+  }
+  
+  .results-table th,
+  .results-table td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .results-table th {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-weight: bold;
+  }
+  
+  .results-table tr:nth-child(even) {
+    background: #f9f9f9;
+  }
+  
+  .results-table tr:hover {
+    background: #f1f1f1;
+  }
+
+  /* style.css */
+.chart-container {
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+  }
+  
+  .chart-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .recharts-cartesian-axis-tick-value {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .recharts-tooltip {
+    background: #ffffff !important;
+    border: 1px solid #ddd !important;
+    border-radius: 5px !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+    padding: 10px !important;
+  }
+  
+  .recharts-bar-rectangle {
+    fill: #8884d8;
+    transition: fill 0.3s ease;
+  }
+  
+  .recharts-bar-rectangle:hover {
+    fill: #6a5acd;
+  }
+
+  /* Loading Screen Styles */
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  font-size: larger;
+}
+
+.spinner {
+  width: 45px;
+  height: 45px;
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #8884d8;
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+  margin-bottom: 1rem;
+
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Results Button Styles */
+.results-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin: 20px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.results-button:hover {
+  background-color: #45a049;
+}
+
+/* Prediction Results Styles */
+.prediction-results {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #8884d8;
+}
+
+.prediction-results h2 {
+  margin: 25px;
+}
+
+.predicted-class {
+  color: #d63384;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.message-container {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.message-container h3 {
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.message-container ul {
+  padding-left: 1.5rem;
+}
+
+.message-container li {
+  margin-bottom: 0.5rem;
+  color: #212529;
+}
+
+.message-content {
+  line-height: 1.6;
+}
+
+.message-line {
+  margin-top: 30px;
+}
+
+.line-gap {
+  height: 1em; /* Creates one line gap */
+  content: ""; /* Ensures the div is visible */
+  display: block; /* Makes it behave like a line break */
+}
+
+.message-container ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
