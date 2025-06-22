@@ -11,7 +11,7 @@ Mental health disorders, particularly depression and suicidal tendencies, are es
 - **NLP & Deep Learning Models**: Bi-LSTM, CNN, SVM, and Transformer-based models like BERT were used to classify mental health indicators in text.
 - **Dataset**: Social media posts and forums provided linguistic data to train classifiers on patterns associated with depression and suicidal ideation.
 - **Hybrid Model**: Combines CNN and RNN architectures to enhance classification accuracy by capturing both local and sequential features in text.
-
+ 
 ## 📊 Results & Evaluation
 
 This section presents a summary of the model evaluation, demonstrating the system’s effectiveness in detecting suicidal ideation, anxiety, and depression using deep learning models.
